@@ -1,0 +1,8 @@
+export("fars_read", "make_filename", "fars_read_years", "fars_summarize_years", "fars_map_state")
+
+importFrom("dplyr", "tbl_df", "mutate", "select", "group_by", "bind_rows", "summarize")
+importFrom("readr", "read_csv")
+importFrom("tidyr", "spread")
+importFrom("maps", "map")
+importFrom("graphics", "points")
+importFrom("magrittr", "%>%")

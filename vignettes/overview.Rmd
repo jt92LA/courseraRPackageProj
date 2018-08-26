@@ -1,0 +1,56 @@
+---
+title: "Overview of courseraRPackageProj"
+author: "Joao Teixeira"
+date: "`2018-08-20`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Overview of courseraRPackageProj}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+knitr::opts_knit$set(root.dir = normalizePath("../inst/extdata"))
+library(courseraRPackageProj)
+```
+
+The CourseraRPackageProj Package provides functions for summarizing and plotting data from the US National Highway Traffic Safety Administration's Fatality Analysis Reporting System, which is a nationwide census providing the American public yearly data regarding fatal injuries suffered in motor vehicle traffic crashes. 
+
+## Reading data
+
+The `make_filename` function creates the filename for the year provided, while the `fars_read` function will read in the file associated to the filename. 
+
+```{r, fig.show='hold'}
+filename <- make_filename(2013)
+data <- fars_read(filename)
+head(data)
+```
+
+## Summarise Data
+
+The `fars_read_years` function returns a list of tibbles for each year provided, with two columns, year and month.
+
+```{r, echo=TRUE, results='asis'}
+years <- c(2014, 2015)
+dat <- fars_read_years(years)
+knitr::kable(head(dat[[1]]))
+```
+
+The `fars_summarize_years` summarizes the counts of incidents for each month in the years provided.
+
+```{r, echo=TRUE, results='asis'}
+years <- c(2014, 2015)
+dat_sum <- fars_summarize_years(years)
+knitr::kable(head(dat_sum))
+```
+
+## Plot Data
+
+The `fars_map_state` function returns a map with the cases in a given year plotted over their state.
+
+```{r, echo=TRUE, results='asis'}
+fars_map_state(6, 2014)

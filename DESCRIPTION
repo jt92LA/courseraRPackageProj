@@ -1,0 +1,14 @@
+Package: courseraRPackageProj
+Type: Package
+Title: Desrcriptive Functions for Motor Vehicle Accident Fatalities Data
+Version: 0.1.0
+Imports: dplyr, readr, tidyr, maps, graphics, magrittr 
+Author: Coursera Specialization
+Maintainer: Joao Teixeira <not.my.real.email@somewhere.net>
+Description: Functions for summarizing and plotting data from the US National Highway Traffic Safety Administration's Fatality Analysis Reporting System, which is a nationwide census providing the American public yearly data regarding fatal injuries suffered in motor vehicle traffic crashes.
+License: CC0
+Suggests: knitr,
+    rmarkdown,
+    testthat
+VignetteBuilder: knitr
+RoxygenNote: 6.1.0
