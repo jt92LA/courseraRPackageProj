@@ -15,6 +15,3 @@ This function returns a character string containing the filename corresponding t
 \description{
 This function outputs the filename corresponding to a given year.
 }
-\examples{
-make_filename(2015)
-}

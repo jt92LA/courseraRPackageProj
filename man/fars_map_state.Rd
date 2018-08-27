@@ -20,6 +20,3 @@ This function takes a year and state code as arguments and plots the cases over 
 \details{
 This function uses the \code{maps::map()} and \code{graphics::points()} functions.
 }
-\examples{
-fars_map_state(22, 2015)
-}

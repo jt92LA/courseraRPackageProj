@@ -18,6 +18,3 @@ This helper function lists, by year, tibbles featuring the year and month of all
 \details{
 This function uses \code{dplyr}'s \code{mutate} and \code{select} functions.
 }
-\examples{
-fars_read_years(c(2014,2015))
-}

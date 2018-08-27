@@ -18,7 +18,3 @@ This function summarizes the counts of cases per month for each year provided in
 \details{
 This function uses \code{tidyr::spread()} and \code{dplyr}'s \code{group_by}, \code{bind_rows}, and \code{summarize} functions.
 }
-\examples{
-fars_summarize_years(c(2014, 2015))
-
-}

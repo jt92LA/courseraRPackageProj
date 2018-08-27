@@ -18,7 +18,3 @@ This is a simple read function that reads in csv file for a given filename.
 \details{
 This function uses the \code{readr::read_csv()} and \code{dplyr::tbl_df()} functions.
 }
-\examples{
-fars_read("accident_2015.csv.bz2")
-
-}
