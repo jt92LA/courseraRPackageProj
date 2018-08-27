@@ -13,7 +13,7 @@
 #'
 #' @details This function uses the \code{readr::read_csv()} and \code{dplyr::tbl_df()} functions.
 #'
-#'
+#' @export
 
 fars_read <- function(filename) {
   if(!file.exists(filename))
@@ -31,7 +31,7 @@ fars_read <- function(filename) {
 #' @param year An integer representing the year.
 #'
 #' @return This function returns a character string containing the filename corresponding to the year input.
-#'
+#' @export
 
 
 make_filename <- function(year) {
@@ -48,7 +48,7 @@ make_filename <- function(year) {
 #'@details This function uses \code{dplyr}'s \code{mutate} and \code{select} functions.
 #'
 #'@return This function returns a list of tibbles for each valid year provided in the input.
-#'
+#'@export
 
 
 fars_read_years <- function(years) {
@@ -72,7 +72,7 @@ fars_read_years <- function(years) {
 #' @return This function returns a tibble featuring the counts of cases with Month as rows, and Year as columns.
 #'
 #' @details This function uses \code{tidyr::spread()} and \code{dplyr}'s \code{group_by}, \code{bind_rows}, and \code{summarize} functions.
-#'
+#' @export
 
 
 fars_summarize_years <- function(years) {
@@ -94,7 +94,7 @@ fars_summarize_years <- function(years) {
 #' @return This function returns a map with the cases in given year over the state.
 #'
 #' @details This function uses the \code{maps::map()} and \code{graphics::points()} functions.
-#'
+#' @export
 
 
 
