@@ -102,7 +102,7 @@ fars_summarize_years <- function(years) {
 #' @details This function uses the \code{maps::map()} and \code{graphics::points()} functions.
 #'
 #' @examples
-#' fars_map_state(22, 2015)
+#' fars_map_state(22, 2014)
 
 
 
