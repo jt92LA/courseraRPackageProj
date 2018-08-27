@@ -13,8 +13,6 @@
 #'
 #' @details This function uses the \code{readr::read_csv()} and \code{dplyr::tbl_df()} functions.
 #'
-#' @examples
-#' fars_read("accident_2015.csv.bz2")
 #'
 
 fars_read <- function(filename) {
@@ -34,8 +32,7 @@ fars_read <- function(filename) {
 #'
 #' @return This function returns a character string containing the filename corresponding to the year input.
 #'
-#' @examples
-#' make_filename(2015)
+
 
 make_filename <- function(year) {
   year <- as.integer(year)
@@ -52,8 +49,7 @@ make_filename <- function(year) {
 #'
 #'@return This function returns a list of tibbles for each valid year provided in the input.
 #'
-#'@examples
-#'fars_read_years(c(2014,2015))
+
 
 fars_read_years <- function(years) {
   lapply(years, function(year) {
@@ -77,9 +73,7 @@ fars_read_years <- function(years) {
 #'
 #' @details This function uses \code{tidyr::spread()} and \code{dplyr}'s \code{group_by}, \code{bind_rows}, and \code{summarize} functions.
 #'
-#' @examples
-#' fars_summarize_years(c(2014, 2015))
-#'
+
 
 fars_summarize_years <- function(years) {
   dat_list <- fars_read_years(years)
@@ -101,8 +95,7 @@ fars_summarize_years <- function(years) {
 #'
 #' @details This function uses the \code{maps::map()} and \code{graphics::points()} functions.
 #'
-#' @examples
-#' fars_map_state(22, 2014)
+
 
 
 
